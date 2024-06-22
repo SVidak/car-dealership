@@ -1,77 +1,10 @@
-<!-- <div class="bg" style="background-color: #F8F8F8;">
-    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
-      <div class="parent">
-        <div class="child">
-          <div nz-row class="imgDiv">
-            <div nz-col nzSpan="24">
-              <h1 style="margin-left: 80px;">Add Car</h1>
-            </div>
-          </div>
-          <form nz-form [formGroup]="carForm" (ngSubmit)="addCar()">
-            
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Ime" formControlName="name" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Brend" formControlName="brand" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Tip" formControlName="type" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Transmisija" formControlName="transmission" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Boja" formControlName="color" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Opis" formControlName="description" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Cena" type="number" formControlName="price" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <nz-form-item>
-              <nz-form-control nzHasFeedback>
-                <input nz-input placeholder="Slika" type="file" formControlName="image" />
-              </nz-form-control>
-            </nz-form-item>
-  
-            <button nz-button class="button login-form-button login-form-margin" [nzType]="'primary'">Dodaj auto</button>
-          </form>
-        </div>
-      </div>
-    </nz-spin>
-  </div>
-   -->
-
    <div class="bg" style="background-color: #F8F8F8;">
     <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
       <div class="parent">
         <div class="child">
           <div nz-row class="imgDiv">
             <div nz-col nzSpan="24">
-              <h1 style="margin-left: 80px;">Dodaj Auto</h1>
+              <h1 style="margin-left: 80px;">Add Car</h1>
             </div>
           </div>
           <form nz-form [formGroup]="carForm" (ngSubmit)="addCar()">
@@ -115,7 +48,7 @@
                 <input nz-input type="file" (change)="onFileChange($event)" />
               </nz-form-control>
             </nz-form-item>
-            <button nz-button class="button login-form-margin" [nzType]="'primary'" nzSize="large">Dodaj auto</button>
+            <button nz-button class="button login-form-margin" [nzType]="'primary'" nzSize="large">Add Car</button>
           </form>
         </div>
       </div>

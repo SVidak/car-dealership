@@ -1,4 +1,4 @@
-<!-- <div *ngIf="cars.length === 0">No cars available</div>
+<div *ngIf="cars.length === 0">No cars available</div>
 <div *ngFor="let car of cars">
   <div class="car-card">
     <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
@@ -6,18 +6,14 @@
     <p>{{ car.description }}</p>
     <p><strong>Price:</strong> {{ car.price }}</p>
   </div>
-</div> -->
+</div>
 
-<div *ngIf="cars.length === 0" class="no-cars-available">No cars available</div>
+<div *ngIf="cars.length === 0">No cars available</div>
 <div class="car-list" *ngIf="cars.length > 0">
   <nz-card *ngFor="let car of cars" class="car-card" nzHoverable>
-    <ng-template #title>
-      <h3>{{ car.name }}</h3>
-    </ng-template>
-    <ng-template #body>
+      <h3>{{ car.name }}</h3>   
       <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
       <p>{{ car.description }}</p>
       <p><strong>Price:</strong> {{ car.price }}</p>
-    </ng-template>
   </nz-card>
 </div>
