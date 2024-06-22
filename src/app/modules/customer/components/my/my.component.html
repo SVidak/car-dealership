@@ -7,18 +7,8 @@
       <h3>{{ car.name }}</h3>
       <p>{{ car.description }}</p>
       <p><strong>Price:</strong> {{ car.price }}</p>
-      <!-- <button (click)="updateCar(car.id)">Update</button> -->
+      <button (click)="updateCar(car.id)">Update</button>
       <button nz-button nzType="primary" nzDanger (click)="deleteCar(car.id)">Delete</button>
     </div>
   </div>
   
-  <!-- <div *ngIf="cars.length === 0">No cars available</div>
-  <div class="car-list" *ngIf="cars.length > 0">
-    <nz-card *ngFor="let car of cars" class="car-card" nzHoverable>
-        <h3>{{ car.name }}</h3>   
-        <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
-        <p>{{ car.description }}</p>
-        <p><strong>Price:</strong> {{ car.price }}</p>
-    </nz-card>
-  </div>
-   -->

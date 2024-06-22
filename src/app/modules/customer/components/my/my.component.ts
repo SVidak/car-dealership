@@ -6,6 +6,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my',
@@ -21,7 +22,8 @@ export class MyComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private modal: NzModalService,
     private notification: NzNotificationService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -41,7 +43,7 @@ export class MyComponent implements OnInit {
   }
 
   updateCar(id: number): void {
-    
+    this.router.navigateByUrl("/update/:id");
   }
   
 
