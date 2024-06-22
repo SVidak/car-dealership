@@ -7,13 +7,15 @@ import { AddComponent } from './components/add/add.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { DemoNGZorroAntdModule } from '../../DemoNgZorroAntdModule';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarListComponent } from '../../car-list/car-list.component';
 
 
 @NgModule({
   declarations: [
     CustomerDashboardComponent,
     AddComponent,
-    CarsComponent
+    CarsComponent,
+    CarListComponent
   ],
   imports: [
     CommonModule,
