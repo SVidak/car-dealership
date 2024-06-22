@@ -32,9 +32,9 @@ export class CarListComponent implements OnInit {
       else if (this.sortOption === 'most expensive')
         this.cars.sort((a,b) => b.price - a.price);
       else if (this.sortOption === 'newest') 
-        this.cars.sort((a,b) => a.year - b.year)
-      else if (this.sortOption === 'oldest')
         this.cars.sort((a,b) => b.year - a.year)
+      else if (this.sortOption === 'oldest')
+        this.cars.sort((a,b) => a.year - b.year)
   }
 
   getSanitizedUrl(base64Image: string): SafeUrl {

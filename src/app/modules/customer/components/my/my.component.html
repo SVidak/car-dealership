@@ -6,7 +6,7 @@
       <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
       <h3>{{ car.name }}</h3>
       <p><strong>Price:</strong> {{ car.price }}</p>
-      <p><strong>Year: </strong>{{ car.year }}</p>
+      <p *ngIf="car.year != null"><strong>Year: </strong>{{ car.year }}</p>
       <!-- <button (click)="updateCar(car.id)">Update</button> -->
       <button nz-button nzType="primary" nzDanger (click)="deleteCar(car.id)">Delete</button>
     </div>
