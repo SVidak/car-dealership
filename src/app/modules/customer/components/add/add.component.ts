@@ -24,6 +24,7 @@ export class AddComponent implements OnInit {
       type: ['', Validators.required],
       transmission: ['', Validators.required],
       color: ['', Validators.required],
+      year: ['', Validators.required],
       description: ['', Validators.required],
       price: ['', Validators.required],
       image: ['', Validators.required]
@@ -54,6 +55,7 @@ export class AddComponent implements OnInit {
       formData.append('type', this.carForm.get('type').value);
       formData.append('transmission', this.carForm.get('transmission').value);
       formData.append('color', this.carForm.get('color').value);
+      formData.append('year', this.carForm.get('year').value);
       formData.append('description', this.carForm.get('description').value);
       formData.append('price', this.carForm.get('price').value);
       formData.append('image', this.carForm.get('image').value);

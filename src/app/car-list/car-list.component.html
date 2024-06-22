@@ -3,6 +3,8 @@
     <nz-option nzValue="name" nzLabel="Name"></nz-option>
     <nz-option nzValue="cheapest" nzLabel="Cheapest"></nz-option>
     <nz-option nzValue="most expensive" nzLabel="Most Expensive"></nz-option>
+    <nz-option nzValue="newest" nzLabel="Newest"></nz-option>
+    <nz-option nzValue="odlest" nzLabel="Oldest"></nz-option>
   </nz-select>
 </div>
 
@@ -13,6 +15,7 @@
       <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
       <p>{{ car.description }}</p>
       <p *ngIf="car.price !== null"><strong>Price:</strong> {{ car.price }}</p>
+      <p *ngIf="car.year !== null"><strong>Year:</strong> {{ car.year }}</p>
       <p *ngIf="car.transmission !== null && car.transmission !== ''"><strong>Transmission:</strong> {{ car.transmission }}</p>
       <p *ngIf="car.color !== null && car.color !== ''"><strong>Color:</strong> {{ car.color }}</p>
   </nz-card>
