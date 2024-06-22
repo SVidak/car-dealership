@@ -1,9 +1,19 @@
+<div style="margin-bottom: 20px; margin-top:20px; text-align: center">
+  <nz-select [(ngModel)]="sortOption" (ngModelChange)="sortCars()" nzPlaceHolder="Sort by">
+    <nz-option nzValue="name" nzLabel="Name"></nz-option>
+    <nz-option nzValue="cheapest" nzLabel="Cheapest"></nz-option>
+    <nz-option nzValue="most expensive" nzLabel="Most Expensive"></nz-option>
+  </nz-select>
+</div>
+
 <div *ngIf="cars.length === 0">No cars available</div>
 <div class="car-list" *ngIf="cars.length > 0">
   <nz-card *ngFor="let car of cars" class="car-card" nzHoverable>
       <h3>{{ car.name }}</h3>   
       <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
       <p>{{ car.description }}</p>
-      <p><strong>Price:</strong> {{ car.price }}</p>
+      <p *ngIf="car.price !== null"><strong>Price:</strong> {{ car.price }}</p>
+      <p *ngIf="car.transmission !== null && car.transmission !== ''"><strong>Transmission:</strong> {{ car.transmission }}</p>
+      <p *ngIf="car.color !== null && car.color !== ''"><strong>Color:</strong> {{ car.color }}</p>
   </nz-card>
 </div>

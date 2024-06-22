@@ -9,6 +9,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 })
 export class CarListComponent implements OnInit {
   cars: Car[] = [];
+  sortOption: string = '';
 
   constructor(private carService: CarService, private sanitizer: DomSanitizer) {}
 
@@ -20,6 +21,16 @@ export class CarListComponent implements OnInit {
       },
       error: (err) => console.error('Error fetching cars', err),
     });
+  }
+
+  sortCars() {
+    if (this.sortOption === 'name') {
+      this.cars.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (this.sortOption === 'cheapest') {
+      this.cars.sort((a, b) => a.price - b.price);
+    }
+      else if (this.sortOption === 'most expensive')
+        this.cars.sort((a,b) => b.price - a.price);
   }
 
   getSanitizedUrl(base64Image: string): SafeUrl {
