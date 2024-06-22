@@ -28,6 +28,12 @@ export class CarService {
     );
   }
 
+  searchCarByName(name: any): Observable<Car[]> {
+    return this.http.get<Car[]>(
+      `http://localhost:8080/api/customer/search/${name}`
+    );
+  }
+
   deleteCar(id: number): Observable<void> {
     return this.http.delete<void>(`http://localhost:8080/api/customer/car/${id}`);
   }

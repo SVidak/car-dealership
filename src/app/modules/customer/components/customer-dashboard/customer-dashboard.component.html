@@ -1,1 +1,29 @@
-<p>customer-dashboard works!</p>
+<form
+  nz-form
+  [formGroup]="validateForm"
+  (submit)="searchCarByName()"
+  style="margin-top: 20px; margin-bottom: 20px; text-align: center"
+>
+  <input
+    nz-input
+    placeholder="Enter Car Name"
+    nzSize="large"
+    style="width: 20%"
+    formControlName="service"
+  />
+
+    <button nz-button nzSize="large" nzType="primary" style="margin-left:15px;" [disabled]="validateForm.invalid">Search</button>
+
+</form>
+
+<div class="no-cars-available" *ngIf="cars.length === 0">
+    <p class="centered-text">No cars available</p>
+  </div>
+  <div *ngFor="let car of cars">
+    <div class="car-card">
+      <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
+      <h3>{{ car.name }}</h3>
+      <p>{{ car.description }}</p>
+      <p><strong>Price:</strong> {{ car.price }}</p>
+    </div>
+  </div>
