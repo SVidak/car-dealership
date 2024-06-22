@@ -6,9 +6,18 @@
 }
 
 .no-cars-available {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 24px; 
 }
+
+.centered-text {
+  margin: 0;
+}
+
 
 .car-card {
   background-color: #f0f2f5;
@@ -27,4 +36,8 @@
 
 .car-card p {
   margin-bottom: 8px;
+}
+
+.centered-text {
+  margin: 0;
 }

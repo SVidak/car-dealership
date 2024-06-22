@@ -1,4 +1,6 @@
-<div *ngIf="cars.length === 0">No cars available</div>
+<div class="no-cars-available" *ngIf="cars.length === 0">
+  <p class="centered-text">No cars available</p>
+</div>
 <div *ngFor="let car of cars">
   <div class="car-card">
     <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
