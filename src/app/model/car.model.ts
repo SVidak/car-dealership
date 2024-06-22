@@ -1,4 +1,7 @@
 export interface Car {
+  type: any;
+  transmission: any;
+  color: any;
   brand: any;
   id: number;
   name: string;
