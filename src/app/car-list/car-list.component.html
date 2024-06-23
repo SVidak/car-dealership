@@ -10,7 +10,7 @@
 
 <div *ngIf="cars.length === 0">No cars available</div>
 <div class="car-list" *ngIf="cars.length > 0">
-  <nz-card *ngFor="let car of cars" class="car-card" nzHoverable>
+  <nz-card *ngFor="let car of cars" class="car-card" nzHoverable routerLink="/customer/car/{{car.id}}">
       <h3>{{ car.name }}</h3>   
       <img [src]="getSanitizedUrl(car.returnedImage)" alt="{{ car.name }}">
       <p>{{ car.description }}</p>

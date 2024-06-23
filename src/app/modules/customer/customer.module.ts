@@ -9,6 +9,7 @@ import { DemoNGZorroAntdModule } from '../../DemoNgZorroAntdModule';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarListComponent } from '../../car-list/car-list.component';
 import { MyComponent } from './components/my/my.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MyComponent } from './components/my/my.component';
     AddComponent,
     CarsComponent,
     CarListComponent,
-    MyComponent
+    MyComponent,
+    CarDetailsComponent
   ],
   imports: [
     CommonModule,
