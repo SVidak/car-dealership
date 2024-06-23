@@ -1,1 +1,17 @@
-<p>admin-dashboard works!</p>
+<div class="car-statistics">
+    <div class="stat-item">
+      <h3>Most Expensive Car</h3>
+      <p>{{ mostExpensiveCar?.name }} - ${{ mostExpensiveCar?.price }}</p>
+    </div>
+    <div class="stat-item">
+      <h3>Average Car Price</h3>
+      <p>${{ averagePrice?.toFixed(2) }}</p>
+    </div>
+    <div class="stat-item">
+      <h3>Total Car Market Price</h3>
+      <p>${{ totalPrice?.toFixed(2) }}</p>
+    </div>
+  </div>
+  
+
+  
