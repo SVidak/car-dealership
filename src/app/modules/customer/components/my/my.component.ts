@@ -34,18 +34,12 @@ export class MyComponent implements OnInit {
     this.carService.getCarsByUser().subscribe(
       (cars: Car[]) => {
         this.cars = cars;
-        console.log(cars);
       },
       (error) => {
         console.error('Error fetching cars:', error);
       }
     );
   }
-
-  updateCar(id: number): void {
-    this.router.navigateByUrl("/update/:id");
-  }
-  
 
   deleteCar(id: number): void {
     this.modal.confirm({

@@ -22,7 +22,6 @@ export class CarService {
 
   getCarsByUser(): Observable<Car[]> {
     const userId = StorageService.getUserId();
-    console.log(userId);
     return this.http.get<Car[]>(
       `http://localhost:8080/api/customer/cars/${userId}`
     );

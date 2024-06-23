@@ -4,7 +4,7 @@
         <div class="child">
           <div nz-row class="imgDiv">
             <div nz-col nzSpan="24">
-              <h1 style="margin-left: 80px;">Login</h1>
+              <h1 style="margin-left: 100px;">Login</h1>
             </div>
           </div>
           <form nz-form [formGroup]="loginForm">
@@ -21,9 +21,6 @@
                 <ng-template #errorPass let-control>
                   <ng-container *ngIf="control.hasError('required')">
                     Password is Required!
-                  </ng-container>
-                  <ng-container *ngIf="control.hasError('pattern')">
-                    Password Should Contains 8 Characters, 1 Lowercase, 1 Uppercase, 1 Number and 1 Special Character
                   </ng-container>
                 </ng-template>
               </nz-form-control>

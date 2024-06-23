@@ -25,7 +25,6 @@ export class CustomerDashboardComponent {
   searchCarByName(){
     this.carService.searchCarByName(this.validateForm.get('service').value).subscribe(res => {
       this.cars = res;
-      console.log(res);
     })
   }
   getSanitizedUrl(base64Image: string): SafeUrl {
